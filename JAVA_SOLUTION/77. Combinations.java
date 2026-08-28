@@ -8,13 +8,11 @@ class Solution {
         return result;
     }
 
-    private void backtrack(int start, int n, int k, List<Integer> path, List<List<Integer>> result) {
-  
+    private void backtrack(int start, int n, int k, List<Integer> path, List<List<Integer>> result) { 
         if (path.size() == k) {
             result.add(new ArrayList<>(path));
             return;
         }
-
 
         int needed = k - path.size();
         int upperBound = n - needed + 1;
