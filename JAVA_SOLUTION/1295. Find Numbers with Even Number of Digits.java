@@ -1,14 +1,14 @@
 class Solution {
     public int findNumbers(int[] nums) {
-        int evenDigitCount = 0;
+        int evenCount = 0;
 
         for (int num : nums) {
-            String numStr = String.valueOf(num);
-            if (numStr.length() % 2 == 0) {
-                evenDigitCount++;
+            int digitCount = (int) Math.log10(num) + 1;
+            if (digitCount % 2 == 0) {
+                evenCount++;
             }
         }
 
-        return evenDigitCount;
+        return evenCount;
     }
 }
